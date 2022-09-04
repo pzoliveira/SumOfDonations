@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Soma de Doações</string>
+    <string name="step_name">Passo</string>
+    <string name="bills_name">Cédulas</string>
+    <string name="coins_name">Moedas</string>
+    <string name="btnChange_name">ALTERA</string>
+</resources>

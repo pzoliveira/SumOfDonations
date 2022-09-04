@@ -7,288 +7,394 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/txtStep"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="39dp"
-        android:layout_marginEnd="309dp"
-        android:layout_marginBottom="673dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="@dimen/leftalign"
+        android:layout_marginTop="@dimen/topalign"
+        android:text="@string/step_name"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/valueStep"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="36dp"
-        android:text="TextView"
-        app:layout_constraintStart_toEndOf="@+id/textView"
+        android:layout_marginStart="@dimen/nextalign"
+        android:layout_marginTop="@dimen/topalign"
+        android:text="01"
+        app:layout_constraintStart_toEndOf="@+id/txtStep"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/txtBills"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="64dp"
-        android:text="TextView"
+        android:layout_marginStart="@dimen/leftalign"
+        android:layout_marginTop="@dimen/titlealign"
+        android:text="@string/bills_name"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/txtStep" />
 
     <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
+        android:id="@+id/txt200bucks"
+        android:layout_width="@dimen/moneywidth"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="33dp"
-        android:text="TextView"
+        android:layout_marginStart="@dimen/leftalign"
+        android:layout_marginTop="@dimen/indexalign"
+        android:text="R$200,00  X  "
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        app:layout_constraintTop_toBottomOf="@+id/txtBills" />
 
     <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
+        android:id="@+id/txt100bucks"
+        android:layout_width="@dimen/moneywidth"
         android:layout_height="wrap_content"
-        android:layout_marginStart="38dp"
-        android:layout_marginTop="13dp"
-        android:text="TextView"
+        android:layout_marginStart="@dimen/leftalign"
+        android:layout_marginTop="@dimen/interalign"
+        android:text="R$100,00  X  "
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        app:layout_constraintTop_toBottomOf="@+id/txt200bucks" />
 
     <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
+        android:id="@+id/txt50bucks"
+        android:layout_width="@dimen/moneywidth"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="19dp"
-        android:text="TextView"
+        android:layout_marginStart="@dimen/leftalign"
+        android:layout_marginTop="@dimen/interalign"
+        android:text="R$ 50,00  X  "
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+        app:layout_constraintTop_toBottomOf="@+id/txt100bucks" />
 
     <TextView
-        android:id="@+id/textView7"
-        android:layout_width="wrap_content"
+        android:id="@+id/txt20bucks"
+        android:layout_width="@dimen/moneywidth"
         android:layout_height="wrap_content"
-        android:layout_marginStart="38dp"
-        android:layout_marginTop="16dp"
-        android:text="TextView"
+        android:layout_marginStart="@dimen/leftalign"
+        android:layout_marginTop="@dimen/interalign"
+        android:text="R$ 20,00  X  "
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+        app:layout_constraintTop_toBottomOf="@+id/txt50bucks" />
 
     <TextView
-        android:id="@+id/textView8"
-        android:layout_width="wrap_content"
+        android:id="@+id/txt10bucks"
+        android:layout_width="@dimen/moneywidth"
         android:layout_height="wrap_content"
-        android:layout_marginStart="38dp"
-        android:layout_marginTop="11dp"
-        android:text="TextView"
+        android:layout_marginStart="@dimen/leftalign"
+        android:layout_marginTop="@dimen/interalign"
+        android:text="R$ 10,00  X  "
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+        app:layout_constraintTop_toBottomOf="@+id/txt20bucks" />
 
     <TextView
-        android:id="@+id/textView9"
-        android:layout_width="wrap_content"
+        android:id="@+id/txt5bucks"
+        android:layout_width="@dimen/moneywidth"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="16dp"
-        android:text="TextView"
+        android:layout_marginStart="@dimen/leftalign"
+        android:layout_marginTop="@dimen/interalign"
+        android:text="R$  5,00  X  "
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+        app:layout_constraintTop_toBottomOf="@+id/txt10bucks" />
 
     <TextView
-        android:id="@+id/textView10"
-        android:layout_width="wrap_content"
+        android:id="@+id/txt2bucks"
+        android:layout_width="@dimen/moneywidth"
         android:layout_height="wrap_content"
-        android:layout_marginStart="38dp"
-        android:layout_marginTop="13dp"
-        android:text="TextView"
+        android:layout_marginStart="@dimen/leftalign"
+        android:layout_marginTop="@dimen/interalign"
+        android:text="R$  2,00  X  "
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+        app:layout_constraintTop_toBottomOf="@+id/txt5bucks" />
 
     <TextView
-        android:id="@+id/textView11"
+        android:id="@+id/txtCoins"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="35dp"
-        android:layout_marginTop="36dp"
-        android:text="TextView"
+        android:layout_marginStart="@dimen/leftalign"
+        android:layout_marginTop="@dimen/titlealign"
+        android:text="@string/coins_name"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+        app:layout_constraintTop_toBottomOf="@+id/txt2bucks" />
 
     <TextView
-        android:id="@+id/textView12"
-        android:layout_width="wrap_content"
+        android:id="@+id/txt100cents"
+        android:layout_width="@dimen/moneywidth"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="25dp"
-        android:text="TextView"
+        android:layout_marginStart="@dimen/leftalign"
+        android:layout_marginTop="@dimen/indexalign"
+        android:text="R$  1,00  X  "
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+        app:layout_constraintTop_toBottomOf="@+id/txtCoins" />
 
     <TextView
-        android:id="@+id/textView13"
-        android:layout_width="wrap_content"
+        android:id="@+id/txt50cents"
+        android:layout_width="@dimen/moneywidth"
         android:layout_height="wrap_content"
-        android:layout_marginStart="33dp"
-        android:layout_marginTop="26dp"
-        android:text="TextView"
+        android:layout_marginStart="@dimen/leftalign"
+        android:layout_marginTop="@dimen/interalign"
+        android:text="R$  0,50  X  "
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+        app:layout_constraintTop_toBottomOf="@+id/txt100cents" />
 
     <TextView
-        android:id="@+id/textView14"
-        android:layout_width="wrap_content"
+        android:id="@+id/txt25cents"
+        android:layout_width="@dimen/moneywidth"
         android:layout_height="wrap_content"
-        android:layout_marginStart="29dp"
-        android:layout_marginTop="18dp"
-        android:text="TextView"
+        android:layout_marginStart="@dimen/leftalign"
+        android:layout_marginTop="@dimen/interalign"
+        android:text="R$  0,25  X  "
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+        app:layout_constraintTop_toBottomOf="@+id/txt50cents" />
 
     <TextView
-        android:id="@+id/textView15"
-        android:layout_width="wrap_content"
+        android:id="@+id/txt10cents"
+        android:layout_width="@dimen/moneywidth"
         android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="9dp"
-        android:text="TextView"
+        android:layout_marginStart="@dimen/leftalign"
+        android:layout_marginTop="@dimen/interalign"
+        android:text="R$  0,10  X  "
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView14" />
+        app:layout_constraintTop_toBottomOf="@+id/txt25cents" />
 
     <TextView
-        android:id="@+id/textView16"
-        android:layout_width="wrap_content"
+        android:id="@+id/txt5cents"
+        android:layout_width="@dimen/moneywidth"
         android:layout_height="wrap_content"
-        android:layout_marginStart="77dp"
-        android:layout_marginTop="37dp"
-        android:text="TextView"
+        android:layout_marginStart="@dimen/leftalign"
+        android:layout_marginTop="@dimen/interalign"
+        android:text="R$  0,05  X  "
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView28" />
+        app:layout_constraintTop_toBottomOf="@+id/txt10cents" />
 
     <TextView
-        android:id="@+id/textView17"
+        android:id="@+id/txtTotalTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="38dp"
-        android:text="TextView"
-        app:layout_constraintStart_toEndOf="@+id/textView16"
-        app:layout_constraintTop_toBottomOf="@+id/textView28" />
+        android:layout_marginStart="@dimen/leftalign"
+        android:layout_marginTop="@dimen/titlealign"
+        android:text="TOTAL: "
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt5cents" />
+
+    <TextView
+        android:id="@+id/txtTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/nextalign"
+        android:layout_marginTop="@dimen/titlealign"
+        android:text="R$  0,00"
+        app:layout_constraintStart_toEndOf="@+id/txtTotalTitle"
+        app:layout_constraintTop_toBottomOf="@+id/txt5cents" />
 
     <TextView
         android:id="@+id/textView18"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="32dp"
-        android:text="TextView"
-        app:layout_constraintStart_toEndOf="@+id/textView4"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        android:layout_marginStart="@dimen/nextalign"
+        android:layout_marginTop="@dimen/indexalign"
+        android:text="0"
+        app:layout_constraintStart_toEndOf="@+id/txt200bucks"
+        app:layout_constraintTop_toBottomOf="@+id/txtBills" />
 
     <TextView
         android:id="@+id/textView19"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="39dp"
-        android:layout_marginTop="23dp"
-        android:text="TextView"
-        app:layout_constraintStart_toEndOf="@+id/textView5"
+        android:layout_marginStart="@dimen/nextalign"
+        android:layout_marginTop="@dimen/interalign"
+        android:text="0"
+        app:layout_constraintStart_toEndOf="@+id/txt100bucks"
         app:layout_constraintTop_toBottomOf="@+id/textView18" />
 
     <TextView
         android:id="@+id/textView20"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="29dp"
-        android:layout_marginTop="16dp"
-        android:text="TextView"
-        app:layout_constraintStart_toEndOf="@+id/textView6"
+        android:layout_marginStart="@dimen/nextalign"
+        android:layout_marginTop="@dimen/interalign"
+        android:text="0"
+        app:layout_constraintStart_toEndOf="@+id/txt50bucks"
         app:layout_constraintTop_toBottomOf="@+id/textView19" />
 
     <TextView
         android:id="@+id/textView21"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="31dp"
-        android:layout_marginTop="12dp"
-        android:text="TextView"
-        app:layout_constraintStart_toEndOf="@+id/textView7"
+        android:layout_marginStart="@dimen/nextalign"
+        android:layout_marginTop="@dimen/interalign"
+        android:text="0"
+        app:layout_constraintStart_toEndOf="@+id/txt20bucks"
         app:layout_constraintTop_toBottomOf="@+id/textView20" />
 
     <TextView
         android:id="@+id/textView22"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="34dp"
-        android:layout_marginTop="12dp"
-        android:text="TextView"
-        app:layout_constraintStart_toEndOf="@+id/textView8"
+        android:layout_marginStart="@dimen/nextalign"
+        android:layout_marginTop="@dimen/interalign"
+        android:text="0"
+        app:layout_constraintStart_toEndOf="@+id/txt10bucks"
         app:layout_constraintTop_toBottomOf="@+id/textView21" />
 
     <TextView
         android:id="@+id/textView23"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="11dp"
-        android:text="TextView"
-        app:layout_constraintStart_toEndOf="@+id/textView9"
+        android:layout_marginStart="@dimen/nextalign"
+        android:layout_marginTop="@dimen/interalign"
+        android:text="0"
+        app:layout_constraintStart_toEndOf="@+id/txt5bucks"
         app:layout_constraintTop_toBottomOf="@+id/textView22" />
 
     <TextView
         android:id="@+id/textView24"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="31dp"
-        android:layout_marginTop="15dp"
-        android:text="TextView"
-        app:layout_constraintStart_toEndOf="@+id/textView10"
+        android:layout_marginStart="@dimen/nextalign"
+        android:layout_marginTop="@dimen/interalign"
+        android:text="0"
+        app:layout_constraintStart_toEndOf="@+id/txt2bucks"
         app:layout_constraintTop_toBottomOf="@+id/textView23" />
 
     <TextView
         android:id="@+id/textView25"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="24dp"
-        android:text="TextView"
-        app:layout_constraintStart_toEndOf="@+id/textView12"
-        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+        android:layout_marginStart="@dimen/nextalign"
+        android:layout_marginTop="@dimen/indexalign"
+        android:text="0"
+        app:layout_constraintStart_toEndOf="@+id/txt100cents"
+        app:layout_constraintTop_toBottomOf="@+id/txtCoins" />
 
     <TextView
         android:id="@+id/textView26"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="35dp"
-        android:layout_marginTop="28dp"
-        android:text="TextView"
-        app:layout_constraintStart_toEndOf="@+id/textView13"
+        android:layout_marginStart="@dimen/nextalign"
+        android:layout_marginTop="@dimen/interalign"
+        android:text="0"
+        app:layout_constraintStart_toEndOf="@+id/txt50cents"
         app:layout_constraintTop_toBottomOf="@+id/textView25" />
 
     <TextView
         android:id="@+id/textView27"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="21dp"
-        android:text="TextView"
-        app:layout_constraintStart_toEndOf="@+id/textView14"
+        android:layout_marginStart="@dimen/nextalign"
+        android:layout_marginTop="@dimen/interalign"
+        android:text="0"
+        app:layout_constraintStart_toEndOf="@+id/txt25cents"
         app:layout_constraintTop_toBottomOf="@+id/textView26" />
 
     <TextView
         android:id="@+id/textView28"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="10dp"
-        android:text="TextView"
-        app:layout_constraintStart_toEndOf="@+id/textView15"
+        android:layout_marginStart="@dimen/nextalign"
+        android:layout_marginTop="@dimen/interalign"
+        android:text="0"
+        app:layout_constraintStart_toEndOf="@+id/txt10cents"
         app:layout_constraintTop_toBottomOf="@+id/textView27" />
+
+    <TextView
+        android:id="@+id/textView100"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/nextalign"
+        android:layout_marginTop="@dimen/interalign"
+        android:text="0"
+        app:layout_constraintStart_toEndOf="@+id/txt5cents"
+        app:layout_constraintTop_toBottomOf="@+id/textView28" />
+
+    <TextView
+        android:id="@+id/txtInd200bks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="144dp"
+        android:layout_marginTop="@dimen/indexalign"
+        android:text="R$  0,00"
+        app:layout_constraintStart_toEndOf="@+id/textView18"
+        app:layout_constraintTop_toBottomOf="@+id/txtBills" />
+
+    <TextView
+        android:id="@+id/txtTtl200bks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="144dp"
+        android:layout_marginTop="@dimen/indexalign"
+        android:text="R$  0,00"
+        app:layout_constraintStart_toEndOf="@+id/textView18"
+        app:layout_constraintTop_toBottomOf="@+id/txtBills" />
+
+    <TextView
+        android:id="@+id/txtTtl100bks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="136dp"
+        android:layout_marginTop="@dimen/interalign"
+        android:text="R$  0,00"
+        app:layout_constraintStart_toEndOf="@+id/textView19"
+        app:layout_constraintTop_toBottomOf="@+id/txtTtl200bks" />
+
+    <TextView
+        android:id="@+id/txtTtl50bks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="148dp"
+        android:layout_marginTop="@dimen/interalign"
+        android:text="R$  0,00"
+        app:layout_constraintStart_toEndOf="@+id/textView20"
+        app:layout_constraintTop_toBottomOf="@+id/txtTtl100bks" />
+
+    <TextView
+        android:id="@+id/txtTtl20bks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="143dp"
+        android:layout_marginTop="@dimen/interalign"
+        android:text="R$  0,00"
+        app:layout_constraintStart_toEndOf="@+id/textView21"
+        app:layout_constraintTop_toBottomOf="@+id/txtTtl50bks" />
+
+    <TextView
+        android:id="@+id/txtTtl10bks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="142dp"
+        android:layout_marginTop="@dimen/interalign"
+        android:text="R$  0,00"
+        app:layout_constraintStart_toEndOf="@+id/textView22"
+        app:layout_constraintTop_toBottomOf="@+id/txtTtl20bks" />
+
+    <TextView
+        android:id="@+id/txtTtl5bks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="145dp"
+        android:layout_marginTop="@dimen/interalign"
+        android:text="R$  0,00"
+        app:layout_constraintStart_toEndOf="@+id/textView23"
+        app:layout_constraintTop_toBottomOf="@+id/txtTtl10bks" />
+
+    <TextView
+        android:id="@+id/txtTtl2bks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="154dp"
+        android:layout_marginTop="18dp"
+        android:text="R$  0,00"
+        app:layout_constraintStart_toEndOf="@+id/textView24"
+        app:layout_constraintTop_toBottomOf="@+id/txtTtl5bks" />
+
+    <Button
+        android:id="@+id/btnChange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/nextalign"
+        android:layout_marginTop="@dimen/topbtnalign"
+        android:text="@string/btnChange_name"
+        app:layout_constraintStart_toEndOf="@+id/valueStep"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button"
@@ -304,78 +410,10 @@
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="336dp"
         android:text="Button"
         app:layout_constraintStart_toEndOf="@+id/textView18"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        app:layout_constraintTop_toBottomOf="@+id/txtBills" />
 
-    <TextView
-        android:id="@+id/textView29"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="144dp"
-        android:layout_marginTop="32dp"
-        android:text="TextView"
-        app:layout_constraintStart_toEndOf="@+id/textView18"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
-
-    <TextView
-        android:id="@+id/textView30"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="136dp"
-        android:layout_marginTop="20dp"
-        android:text="TextView"
-        app:layout_constraintStart_toEndOf="@+id/textView19"
-        app:layout_constraintTop_toBottomOf="@+id/textView29" />
-
-    <TextView
-        android:id="@+id/textView31"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="148dp"
-        android:layout_marginTop="10dp"
-        android:text="TextView"
-        app:layout_constraintStart_toEndOf="@+id/textView20"
-        app:layout_constraintTop_toBottomOf="@+id/textView30" />
-
-    <TextView
-        android:id="@+id/textView32"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="143dp"
-        android:layout_marginTop="7dp"
-        android:text="TextView"
-        app:layout_constraintStart_toEndOf="@+id/textView21"
-        app:layout_constraintTop_toBottomOf="@+id/textView31" />
-
-    <TextView
-        android:id="@+id/textView33"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="142dp"
-        android:layout_marginTop="28dp"
-        android:text="TextView"
-        app:layout_constraintStart_toEndOf="@+id/textView22"
-        app:layout_constraintTop_toBottomOf="@+id/textView32" />
-
-    <TextView
-        android:id="@+id/textView34"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="145dp"
-        android:layout_marginTop="12dp"
-        android:text="TextView"
-        app:layout_constraintStart_toEndOf="@+id/textView23"
-        app:layout_constraintTop_toBottomOf="@+id/textView33" />
-
-    <TextView
-        android:id="@+id/textView35"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="154dp"
-        android:layout_marginTop="18dp"
-        android:text="TextView"
-        app:layout_constraintStart_toEndOf="@+id/textView24"
-        app:layout_constraintTop_toBottomOf="@+id/textView34" />
 </androidx.constraintlayout.widget.ConstraintLayout>
