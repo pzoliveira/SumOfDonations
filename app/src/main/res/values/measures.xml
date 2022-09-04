@@ -7,5 +7,10 @@
     <dimen name="interalign">15dp</dimen>
     <dimen name="nextalign">20dp</dimen>
     <dimen name="topbtnalign">25dp</dimen>
-    <dimen name="moneywidth">90dp</dimen>
+    <dimen name="moneywidth">81dp</dimen>
+    <dimen name="qtywitdth">27dp</dimen>
+    <dimen name="btndistleft">80dp</dimen>
+    <dimen name="btndisttop">10dp</dimen>
+    <dimen name="interbtndist">5dp</dimen>
+    <dimen name="btnsub">10dp</dimen>
 </resources>
