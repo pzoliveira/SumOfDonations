@@ -3,9 +3,12 @@ package com.example.sumofdonations;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
+
+import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -98,7 +101,256 @@ public class MainActivity extends AppCompatActivity {
         // Code starts here
 
 
+        btnChange.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(tvValueStep.getText().equals("01")){
+                tvValueStep.setText("05");
+                } else if(tvValueStep.getText().equals("05")){
+                tvValueStep.setText("10");
+                } else if(tvValueStep.getText().equals("10")){
+                tvValueStep.setText("01");
+                }
+            }
+        });
 
+        ibInc200bks.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                performMoneycalc("plus", tvQty200bks, tvValueStep, 200.0f, tvTtl200bks);
+                evaluateTotal();
+            }
+        });
+
+        ibDec200bks.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                performMoneycalc("minus", tvQty200bks, tvValueStep, 200.0f, tvTtl200bks);
+                evaluateTotal();
+            }
+        });
+
+        ibInc100bks.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                performMoneycalc("plus", tvQty100bks, tvValueStep, 100.0f, tvTtl100bks);
+                evaluateTotal();
+            }
+        });
+
+        ibDec100bks.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                performMoneycalc("minus", tvQty100bks, tvValueStep, 100.0f, tvTtl100bks);
+                evaluateTotal();
+            }
+        });
+
+        ibInc50bks.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                performMoneycalc("plus", tvQty50bks, tvValueStep, 50.0f, tvTtl50bks);
+                evaluateTotal();
+            }
+        });
+
+        ibDec50bks.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                performMoneycalc("minus", tvQty50bks, tvValueStep, 50.0f, tvTtl50bks);
+                evaluateTotal();
+            }
+        });
+
+        ibInc20bks.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                performMoneycalc("plus", tvQty20bks, tvValueStep, 20.0f, tvTtl20bks);
+                evaluateTotal();
+            }
+        });
+
+        ibDec20bks.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                performMoneycalc("minus", tvQty20bks, tvValueStep, 20.0f, tvTtl20bks);
+                evaluateTotal();
+            }
+        });
+
+        ibInc10bks.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                performMoneycalc("plus", tvQty10bks, tvValueStep, 10.0f, tvTtl10bks);
+                evaluateTotal();
+            }
+        });
+
+        ibDec10bks.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                performMoneycalc("minus", tvQty10bks, tvValueStep, 10.0f, tvTtl10bks);
+                evaluateTotal();
+            }
+        });
+
+        ibInc5bks.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                performMoneycalc("plus", tvQty5bks, tvValueStep, 5.0f, tvTtl5bks);
+                evaluateTotal();
+            }
+        });
+
+        ibDec5bks.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                performMoneycalc("minus", tvQty5bks, tvValueStep, 5.0f, tvTtl5bks);
+                evaluateTotal();
+            }
+        });
+
+        ibInc2bks.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                performMoneycalc("plus", tvQty2bks, tvValueStep, 2.0f, tvTtl2bks);
+                evaluateTotal();
+            }
+        });
+
+        ibDec2bks.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                performMoneycalc("minus", tvQty2bks, tvValueStep, 2.0f, tvTtl2bks);
+                evaluateTotal();
+            }
+        });
+
+        ibInc100cts.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                performMoneycalc("plus", tvQty100cts, tvValueStep, 1.0f, tvTtl100cts);
+                evaluateTotal();
+            }
+        });
+
+        ibDec100cts.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                performMoneycalc("minus", tvQty100cts, tvValueStep, 1.0f, tvTtl100cts);
+                evaluateTotal();
+            }
+        });
+
+        ibInc50cts.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                performMoneycalc("plus", tvQty50cts, tvValueStep, 0.5f, tvTtl50cts);
+                evaluateTotal();
+            }
+        });
+
+        ibDec50cts.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                performMoneycalc("minus", tvQty50cts, tvValueStep, 0.5f, tvTtl50cts);
+                evaluateTotal();
+            }
+        });
+
+        ibInc25cts.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                performMoneycalc("plus", tvQty25cts, tvValueStep, 0.25f, tvTtl25cts);
+                evaluateTotal();
+            }
+        });
+
+        ibDec25cts.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                performMoneycalc("minus", tvQty25cts, tvValueStep, 0.25f, tvTtl25cts);
+                evaluateTotal();
+            }
+        });
+
+        ibInc10cts.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                performMoneycalc("plus", tvQty10cts, tvValueStep, 0.1f, tvTtl10cts);
+                evaluateTotal();
+            }
+        });
+
+        ibDec10cts.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                performMoneycalc("minus", tvQty10cts, tvValueStep, 0.1f, tvTtl10cts);
+                evaluateTotal();
+            }
+        });
+
+        ibInc5cts.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                performMoneycalc("plus", tvQty5cts, tvValueStep, 0.05f, tvTtl5cts);
+                evaluateTotal();
+            }
+        });
+
+        ibDec5cts.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                performMoneycalc("minus", tvQty5cts, tvValueStep, 0.05f, tvTtl5cts);
+                evaluateTotal();
+            }
+        });
 
     }
+
+    public void performMoneycalc(String operationToPerform, TextView quantityOfMoney, TextView stepValue, Float multiplierAmount, TextView totalValueOfMoney){
+        if(operationToPerform.equals("plus")){
+            Integer qntityRslt = Integer.parseInt(quantityOfMoney.getText().toString());
+            qntityRslt += Integer.parseInt(stepValue.getText().toString());
+            if(qntityRslt > 999){
+                qntityRslt = 999;
+            }
+            String qntityDisp = String.format(Locale.getDefault(), "%d", qntityRslt);
+            quantityOfMoney.setText(qntityDisp);
+            Float moneyRslt = qntityRslt * multiplierAmount;
+            String moneyDisp = String.format(Locale.FRENCH, "%.2f", moneyRslt);
+            totalValueOfMoney.setText(moneyDisp);
+        } else {
+            Integer qntityRslt = Integer.parseInt(quantityOfMoney.getText().toString());
+            qntityRslt -= Integer.parseInt(stepValue.getText().toString());
+            if(qntityRslt < 0){
+                qntityRslt = 0;
+            }
+            String qntityDisp = String.format(Locale.getDefault(), "%d", qntityRslt);
+            quantityOfMoney.setText(qntityDisp);
+            Float moneyRslt = qntityRslt * 200.0f;
+            String moneyDisp = String.format(Locale.FRENCH, "%.2f", moneyRslt);
+            totalValueOfMoney.setText(moneyDisp);
+        }
+    }
+
+    public void evaluateTotal(){
+        Float totalRslt = 0.0f;
+        Float total200bks = Float.parseFloat(tvTtl200bks.getText().toString().replace(',','.'));
+        Float total100bks = Float.parseFloat(tvTtl100bks.getText().toString().replace(',','.'));
+        Float total50bks = Float.parseFloat(tvTtl50bks.getText().toString().replace(',','.'));
+        Float total20bks = Float.parseFloat(tvTtl20bks.getText().toString().replace(',','.'));
+        Float total10bks = Float.parseFloat(tvTtl10bks.getText().toString().replace(',','.'));
+        Float total5bks = Float.parseFloat(tvTtl5bks.getText().toString().replace(',','.'));
+        Float total2bks = Float.parseFloat(tvTtl2bks.getText().toString().replace(',','.'));
+        Float total100cts = Float.parseFloat(tvTtl100cts.getText().toString().replace(',','.'));
+        Float total50cts = Float.parseFloat(tvTtl50cts.getText().toString().replace(',','.'));
+        Float total25cts = Float.parseFloat(tvTtl25cts.getText().toString().replace(',','.'));
+        Float total10cts = Float.parseFloat(tvTtl10cts.getText().toString().replace(',','.'));
+        Float total5cts = Float.parseFloat(tvTtl5cts.getText().toString().replace(',','.'));
+        totalRslt += total200bks + total100bks + total50bks + total20bks + total10bks + total5bks + total2bks + total100cts + total50cts + total25cts + total10cts + total5cts;
+        String totalDisp = String.format(Locale.FRENCH, "R$  %.2f", totalRslt);
+        tvTotalValue.setText(totalDisp);
+    }
+
 }
