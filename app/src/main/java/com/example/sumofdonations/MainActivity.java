@@ -328,7 +328,7 @@ public class MainActivity extends AppCompatActivity {
             }
             String qntityDisp = String.format(Locale.getDefault(), "%d", qntityRslt);
             quantityOfMoney.setText(qntityDisp);
-            Float moneyRslt = qntityRslt * 200.0f;
+            Float moneyRslt = qntityRslt * multiplierAmount;
             String moneyDisp = String.format(Locale.FRENCH, "%.2f", moneyRslt);
             totalValueOfMoney.setText(moneyDisp);
         }
