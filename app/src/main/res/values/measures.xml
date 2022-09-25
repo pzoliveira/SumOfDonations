@@ -2,7 +2,6 @@
 <resources>
     <dimen name="leftalign">40dp</dimen>
     <dimen name="topalign">40dp</dimen>
-    <dimen name="titlealign">30dp</dimen>
     <dimen name="indexalign">20dp</dimen>
     <dimen name="interalign">15dp</dimen>
     <dimen name="nextalign">20dp</dimen>
