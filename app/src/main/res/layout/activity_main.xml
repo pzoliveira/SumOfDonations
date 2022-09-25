@@ -491,7 +491,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/nextalign"
-        android:layout_marginTop="18dp"
+        android:layout_marginTop="@dimen/interalign"
         android:text="= R$"
         app:layout_constraintStart_toEndOf="@+id/txtQty2bks"
         app:layout_constraintTop_toBottomOf="@+id/txtTtl5bks" />
@@ -501,7 +501,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/nextalign"
-        android:layout_marginTop="18dp"
+        android:layout_marginTop="@dimen/interalign"
         android:text="0,00"
         app:layout_constraintStart_toEndOf="@+id/txtInd2bks"
         app:layout_constraintTop_toBottomOf="@+id/txtTtl5bks" />
@@ -885,12 +885,14 @@
 
     <EditText
         android:id="@+id/editTextDate"
-        android:layout_width="150dp"
+        android:layout_width="120dp"
         android:layout_height="40dp"
         android:layout_marginStart="@dimen/nextalign"
         android:layout_marginTop="@dimen/topbtnalign"
         android:ems="10"
         android:inputType="date"
+        android:singleLine="true"
+        android:text="01/01/2022"
         android:textSize="16sp"
         app:layout_constraintStart_toEndOf="@id/btnChange"
         app:layout_constraintTop_toTopOf="parent" />

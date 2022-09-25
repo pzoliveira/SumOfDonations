@@ -373,7 +373,7 @@ public class MainActivity extends AppCompatActivity {
         Float total2bks = Float.parseFloat(tvTtl2bks.getText().toString().replace(',','.'));
         subtotalRslt += total200bks + total100bks + total50bks + total20bks + total10bks + total5bks + total2bks;
         String subtotalDisp = String.format(Locale.FRENCH, "R$  %.2f", subtotalRslt);
-        tvTotalValue.setText(subtotalDisp);
+        tvSubtotalBills.setText(subtotalDisp);
     }
 
     public void evaluateSubtotalCoins(){
@@ -385,7 +385,7 @@ public class MainActivity extends AppCompatActivity {
         Float total5cts = Float.parseFloat(tvTtl5cts.getText().toString().replace(',','.'));
         subtotalRslt += total100cts + total50cts + total25cts + total10cts + total5cts;
         String subtotalDisp = String.format(Locale.FRENCH, "R$  %.2f", subtotalRslt);
-        tvTotalValue.setText(subtotalDisp);
+        tvSubtotalCoins.setText(subtotalDisp);
     }
 
     public void evaluateTotal(){
