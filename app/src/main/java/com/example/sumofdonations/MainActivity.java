@@ -8,6 +8,8 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
 import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
@@ -19,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     TextView tvTtl200bks, tvTtl100bks, tvTtl50bks, tvTtl20bks, tvTtl10bks, tvTtl5bks, tvTtl2bks;
     TextView tvQty100cts, tvQty50cts, tvQty25cts, tvQty10cts, tvQty5cts;
     TextView tvTtl100cts, tvTtl50cts, tvTtl25cts, tvTtl10cts, tvTtl5cts;
-    TextView tvTotalValue;
+    TextView tvSubtotalBills, tvSubtotalCoins, tvTotalValue;
 
     Button btnChange;
 
@@ -65,6 +67,8 @@ public class MainActivity extends AppCompatActivity {
         tvTtl10cts = (TextView) findViewById(R.id.txtTtl10cts);
         tvTtl5cts = (TextView) findViewById(R.id.txtTtl5cts);
 
+        tvSubtotalBills = (TextView) findViewById(R.id.txtSubtotalBills);
+        tvSubtotalCoins = (TextView) findViewById(R.id.txtSubtotalCoins);
         tvTotalValue = (TextView) findViewById(R.id.txtTotal);
 
         btnChange = (Button) findViewById(R.id.btnChange);
@@ -118,6 +122,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 performMoneycalc("plus", tvQty200bks, tvValueStep, 200.0f, tvTtl200bks);
+                evaluateSubtotalBills();
                 evaluateTotal();
             }
         });
@@ -126,6 +131,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 performMoneycalc("minus", tvQty200bks, tvValueStep, 200.0f, tvTtl200bks);
+                evaluateSubtotalBills();
                 evaluateTotal();
             }
         });
@@ -134,6 +140,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 performMoneycalc("plus", tvQty100bks, tvValueStep, 100.0f, tvTtl100bks);
+                evaluateSubtotalBills();
                 evaluateTotal();
             }
         });
@@ -142,6 +149,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 performMoneycalc("minus", tvQty100bks, tvValueStep, 100.0f, tvTtl100bks);
+                evaluateSubtotalBills();
                 evaluateTotal();
             }
         });
@@ -150,6 +158,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 performMoneycalc("plus", tvQty50bks, tvValueStep, 50.0f, tvTtl50bks);
+                evaluateSubtotalBills();
                 evaluateTotal();
             }
         });
@@ -158,6 +167,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 performMoneycalc("minus", tvQty50bks, tvValueStep, 50.0f, tvTtl50bks);
+                evaluateSubtotalBills();
                 evaluateTotal();
             }
         });
@@ -166,6 +176,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 performMoneycalc("plus", tvQty20bks, tvValueStep, 20.0f, tvTtl20bks);
+                evaluateSubtotalBills();
                 evaluateTotal();
             }
         });
@@ -174,6 +185,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 performMoneycalc("minus", tvQty20bks, tvValueStep, 20.0f, tvTtl20bks);
+                evaluateSubtotalBills();
                 evaluateTotal();
             }
         });
@@ -182,6 +194,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 performMoneycalc("plus", tvQty10bks, tvValueStep, 10.0f, tvTtl10bks);
+                evaluateSubtotalBills();
                 evaluateTotal();
             }
         });
@@ -190,6 +203,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 performMoneycalc("minus", tvQty10bks, tvValueStep, 10.0f, tvTtl10bks);
+                evaluateSubtotalBills();
                 evaluateTotal();
             }
         });
@@ -198,6 +212,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 performMoneycalc("plus", tvQty5bks, tvValueStep, 5.0f, tvTtl5bks);
+                evaluateSubtotalBills();
                 evaluateTotal();
             }
         });
@@ -206,6 +221,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 performMoneycalc("minus", tvQty5bks, tvValueStep, 5.0f, tvTtl5bks);
+                evaluateSubtotalBills();
                 evaluateTotal();
             }
         });
@@ -214,6 +230,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 performMoneycalc("plus", tvQty2bks, tvValueStep, 2.0f, tvTtl2bks);
+                evaluateSubtotalBills();
                 evaluateTotal();
             }
         });
@@ -222,6 +239,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 performMoneycalc("minus", tvQty2bks, tvValueStep, 2.0f, tvTtl2bks);
+                evaluateSubtotalBills();
                 evaluateTotal();
             }
         });
@@ -230,6 +248,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 performMoneycalc("plus", tvQty100cts, tvValueStep, 1.0f, tvTtl100cts);
+                evaluateSubtotalCoins();
                 evaluateTotal();
             }
         });
@@ -238,6 +257,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 performMoneycalc("minus", tvQty100cts, tvValueStep, 1.0f, tvTtl100cts);
+                evaluateSubtotalCoins();
                 evaluateTotal();
             }
         });
@@ -246,6 +266,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 performMoneycalc("plus", tvQty50cts, tvValueStep, 0.5f, tvTtl50cts);
+                evaluateSubtotalCoins();
                 evaluateTotal();
             }
         });
@@ -254,6 +275,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 performMoneycalc("minus", tvQty50cts, tvValueStep, 0.5f, tvTtl50cts);
+                evaluateSubtotalCoins();
                 evaluateTotal();
             }
         });
@@ -262,6 +284,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 performMoneycalc("plus", tvQty25cts, tvValueStep, 0.25f, tvTtl25cts);
+                evaluateSubtotalCoins();
                 evaluateTotal();
             }
         });
@@ -270,6 +293,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 performMoneycalc("minus", tvQty25cts, tvValueStep, 0.25f, tvTtl25cts);
+                evaluateSubtotalCoins();
                 evaluateTotal();
             }
         });
@@ -278,6 +302,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 performMoneycalc("plus", tvQty10cts, tvValueStep, 0.1f, tvTtl10cts);
+                evaluateSubtotalCoins();
                 evaluateTotal();
             }
         });
@@ -286,6 +311,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 performMoneycalc("minus", tvQty10cts, tvValueStep, 0.1f, tvTtl10cts);
+                evaluateSubtotalCoins();
                 evaluateTotal();
             }
         });
@@ -294,6 +320,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 performMoneycalc("plus", tvQty5cts, tvValueStep, 0.05f, tvTtl5cts);
+                evaluateSubtotalCoins();
                 evaluateTotal();
             }
         });
@@ -302,6 +329,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 performMoneycalc("minus", tvQty5cts, tvValueStep, 0.05f, tvTtl5cts);
+                evaluateSubtotalCoins();
                 evaluateTotal();
             }
         });
@@ -332,6 +360,32 @@ public class MainActivity extends AppCompatActivity {
             String moneyDisp = String.format(Locale.FRENCH, "%.2f", moneyRslt);
             totalValueOfMoney.setText(moneyDisp);
         }
+    }
+
+    public void evaluateSubtotalBills(){
+        Float subtotalRslt = 0.0f;
+        Float total200bks = Float.parseFloat(tvTtl200bks.getText().toString().replace(',','.'));
+        Float total100bks = Float.parseFloat(tvTtl100bks.getText().toString().replace(',','.'));
+        Float total50bks = Float.parseFloat(tvTtl50bks.getText().toString().replace(',','.'));
+        Float total20bks = Float.parseFloat(tvTtl20bks.getText().toString().replace(',','.'));
+        Float total10bks = Float.parseFloat(tvTtl10bks.getText().toString().replace(',','.'));
+        Float total5bks = Float.parseFloat(tvTtl5bks.getText().toString().replace(',','.'));
+        Float total2bks = Float.parseFloat(tvTtl2bks.getText().toString().replace(',','.'));
+        subtotalRslt += total200bks + total100bks + total50bks + total20bks + total10bks + total5bks + total2bks;
+        String subtotalDisp = String.format(Locale.FRENCH, "R$  %.2f", subtotalRslt);
+        tvTotalValue.setText(subtotalDisp);
+    }
+
+    public void evaluateSubtotalCoins(){
+        Float subtotalRslt = 0.0f;
+        Float total100cts = Float.parseFloat(tvTtl100cts.getText().toString().replace(',','.'));
+        Float total50cts = Float.parseFloat(tvTtl50cts.getText().toString().replace(',','.'));
+        Float total25cts = Float.parseFloat(tvTtl25cts.getText().toString().replace(',','.'));
+        Float total10cts = Float.parseFloat(tvTtl10cts.getText().toString().replace(',','.'));
+        Float total5cts = Float.parseFloat(tvTtl5cts.getText().toString().replace(',','.'));
+        subtotalRslt += total100cts + total50cts + total25cts + total10cts + total5cts;
+        String subtotalDisp = String.format(Locale.FRENCH, "R$  %.2f", subtotalRslt);
+        tvTotalValue.setText(subtotalDisp);
     }
 
     public void evaluateTotal(){

@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Sum Of Donations</string>
-    <string name="step_name">Step</string>
+    <string name="step_name">Step\:</string>
     <string name="bills_name">Bills</string>
     <string name="coins_name">Coins</string>
     <string name="btnChange_name">CHANGE</string>
